@@ -1,0 +1,25 @@
+## Interface: 120005
+## Title: TroyBloodlustMusic
+## Author: Troy
+## Version: @project-version@
+## Notes: Plays a configurable sound when you receive a bloodlust-like effect
+## SavedVariables: TroyBloodlustMusicDB
+## IconTexture: 3860695
+
+## X-Localization: enUS, zhTW
+## X-CompatibleLocales: enUS, zhTW
+
+## X-Credits: Cladhaire (jnwhiteh) — Original author of OhnoBloodlust
+
+## X-Curse-Project-ID: 1537564
+
+core\AddonCore.lua
+libs\LibStub\LibStub.lua
+libs\AceDB-3.0\AceDB-3.0.lua
+i18n\Localization.enUS.lua
+i18n\Localization.zhTW.lua
+
+sounds\sounds.lua
+
+core\core.lua
+core\config.lua

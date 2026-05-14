@@ -1,3 +1,9 @@
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
 # Compiled Lua sources
 luac.out
 
