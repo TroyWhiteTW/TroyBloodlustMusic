@@ -6,8 +6,8 @@
 ## SavedVariables: TroyBloodlustMusicDB
 ## IconTexture: 3860695
 
-## X-Localization: enUS, zhTW
-## X-CompatibleLocales: enUS, zhTW
+## X-Localization: deDE, enUS, frFR, koKR, zhCN, zhTW
+## X-CompatibleLocales: deDE, enUS, frFR, koKR, zhCN, zhTW
 
 ## X-Credits: Cladhaire (jnwhiteh) — Original author of OhnoBloodlust
 
@@ -17,6 +17,10 @@ core\AddonCore.lua
 libs\LibStub\LibStub.lua
 libs\AceDB-3.0\AceDB-3.0.lua
 i18n\Localization.enUS.lua
+i18n\Localization.deDE.lua
+i18n\Localization.frFR.lua
+i18n\Localization.koKR.lua
+i18n\Localization.zhCN.lua
 i18n\Localization.zhTW.lua
 
 sounds\sounds.lua
