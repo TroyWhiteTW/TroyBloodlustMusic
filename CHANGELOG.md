@@ -8,6 +8,10 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 
 ## English Changelog
 
+### v1.1.1-release (2026-06-18)
+
+- Bumped `## Interface` to 120007 for compatibility with World of Warcraft 12.0.7
+
 ### v1.1.0-release (2026-05-15)
 
 - Added Simplified Chinese (zhCN), Korean (koKR), German (deDE), and French (frFR) localizations covering all settings-panel strings and chat messages
@@ -25,6 +29,10 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 ---
 
 ## 中文更新紀錄
+
+### v1.1.1-release (2026-06-18)
+
+- 更新 `## Interface` 至 120007，相容魔獸世界 12.0.7 版本
 
 ### v1.1.0-release (2026-05-15)
 
