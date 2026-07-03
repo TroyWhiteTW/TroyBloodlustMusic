@@ -16,7 +16,7 @@ Plays a custom sound whenever you receive a Bloodlust-like effect — Bloodlust 
 - **Login-safe** — won't fire if you log in while the effect is already active
 - **Combat-safe re-sync** — corrects state after `UNIT_AURA` throttling in long fights
 - **Optional chat messages** when the effect starts and fades
-- **Localized** — English and 繁體中文
+- **Localized** — English, Deutsch, Français, 한국어, 简体中文, 繁體中文
 
 ## Configuration
 
@@ -70,7 +70,7 @@ Built on [LibStub](https://www.wowace.com/projects/libstub) and [AceDB-3.0](http
 - **登入抑制** — 登入時若已有嗜血 buff 不會誤觸
 - **戰鬥結束後重新同步** — 修正 `UNIT_AURA` 在戰鬥中節流可能漏失的狀態
 - **可選聊天提示** — 嗜血開始與結束時於聊天視窗顯示訊息
-- **多語系** — 英文、繁體中文
+- **多語系** — 英文、德文、法文、韓文、簡體中文、繁體中文
 
 ## 設定
 

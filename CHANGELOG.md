@@ -8,6 +8,13 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 
 ## English Changelog
 
+### v1.1.2-release (2026-07-04)
+
+- Added an in-game AddOn List category (`## Category`): "Buffs & Debuffs", localized for all six supported locales
+- Random mode no longer plays the same track twice in a row
+- Hardened chat messages so translations containing `%` can no longer break `string.format`
+- Fixed the README localization list to include all six supported locales
+
 ### v1.1.1-release (2026-06-18)
 
 - Bumped `## Interface` to 120007 for compatibility with World of Warcraft 12.0.7
@@ -29,6 +36,13 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 ---
 
 ## 中文更新紀錄
+
+### v1.1.2-release (2026-07-04)
+
+- 新增遊戲內插件清單分類（`## Category`）：「增益與減益」，涵蓋全部六種支援語系
+- 隨機模式不再連續播放同一首曲目
+- 強化聊天訊息處理，翻譯文字含 `%` 字元時不再導致 `string.format` 出錯
+- 修正 README 語系清單，補上全部六種支援語系
 
 ### v1.1.1-release (2026-06-18)
 

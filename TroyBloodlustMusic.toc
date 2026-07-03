@@ -6,6 +6,13 @@
 ## SavedVariables: TroyBloodlustMusicDB
 ## IconTexture: 3860695
 
+## Category: Buffs & Debuffs
+## Category-deDE: Buffs & Debuffs
+## Category-frFR: Améliorations et Affaiblissements
+## Category-koKR: 버프 및 디버프
+## Category-zhCN: 增益和减益
+## Category-zhTW: 增益與減益
+
 ## X-Localization: deDE, enUS, frFR, koKR, zhCN, zhTW
 ## X-CompatibleLocales: deDE, enUS, frFR, koKR, zhCN, zhTW
 

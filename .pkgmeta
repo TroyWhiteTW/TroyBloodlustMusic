@@ -11,6 +11,8 @@ externals:
 ignore:
   - .github
   - .vscode
+  - CLAUDE.md
+  - PUBLISH.md
 
 manual-changelog:
   filename: CHANGELOG.md

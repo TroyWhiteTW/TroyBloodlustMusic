@@ -109,7 +109,8 @@ function addon:StartBloodlust()
     if self.suppressSound then return end
 
     if self.db.profile.chat then
-        self:Printf(L["Bloodlust detected!"])
+        -- "%s" guards against '%' in translations breaking string.format / "%s" 避免翻譯含 % 時 string.format 出錯
+        self:Printf("%s", L["Bloodlust detected!"])
     end
 
     self:PlayConfiguredSoundAndChannel()
@@ -119,7 +120,8 @@ function addon:StopBloodlust()
     self.active = false
 
     if self.db.profile.chat then
-        self:Printf(L["Bloodlust has faded"])
+        -- "%s" guards against '%' in translations breaking string.format / "%s" 避免翻譯含 % 時 string.format 出錯
+        self:Printf("%s", L["Bloodlust has faded"])
     end
 end
 
@@ -131,9 +133,22 @@ end
 
 function addon:GetRandomSoundFile()
     local choices = self.randomChoices
-    if #choices == 0 then return nil end
-    local value = choices[math.random(#choices)]
-    return self.soundRegistry[value].file
+    local count = #choices
+    if count == 0 then return nil end
+
+    local index
+    if count > 1 and self.lastRandomIndex then
+        -- Draw from the other n-1 tracks to avoid immediate repeats, keeping uniform distribution
+        -- 從其餘 n-1 首中均勻抽選以避免連續重複同曲
+        index = math.random(count - 1)
+        if index >= self.lastRandomIndex then
+            index = index + 1
+        end
+    else
+        index = math.random(count)
+    end
+    self.lastRandomIndex = index
+    return self.soundRegistry[choices[index]].file
 end
 
 function addon:PlayConfiguredSoundAndChannel()
