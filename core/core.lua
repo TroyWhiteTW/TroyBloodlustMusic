@@ -36,9 +36,10 @@ function addon:Initialize()
     self.randomChoices = {}
     ---@diagnostic disable-next-line: undefined-field -- soundManifest is set by sounds/sounds.lua, loaded before this file via TOC order / soundManifest 由 sounds/sounds.lua 設定，TOC 載入順序保證在此檔之前
     for _, filename in ipairs(self.soundManifest or {}) do
-        local name = filename:match("(.+)%.[^.]+$") or filename
         self.soundRegistry[filename] = {
-            name = name,
+            -- Show the filename as-is; files differing only by extension stay distinguishable
+            -- 直接顯示完整檔名，僅副檔名不同的檔案也能區分
+            name = filename,
             file = soundsPath .. filename,
         }
         table.insert(self.randomChoices, filename)
@@ -167,6 +168,9 @@ function addon:PlayConfiguredSoundAndChannel()
 
     if self.soundHandle then
         StopSound(self.soundHandle, 500)
+        -- Clear even if the next PlaySoundFile fails, so no stale handle is reused
+        -- 即使下面播放失敗也先清空，避免重複使用已失效的 handle
+        self.soundHandle = nil
     end
 
     if soundFile and channel then

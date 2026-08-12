@@ -1,8 +1,13 @@
-## Interface: 120007
+## Interface: 120100
 ## Title: TroyBloodlustMusic
 ## Author: Troy
 ## Version: @project-version@
 ## Notes: Plays a configurable sound when you receive a bloodlust-like effect
+## Notes-deDE: Spielt einen konfigurierbaren Sound ab, wenn du einen Blutdurst-ähnlichen Effekt erhältst
+## Notes-frFR: Joue un son configurable lorsque vous recevez un effet de type Soif de sang
+## Notes-koKR: 피의 욕망 계열 효과를 받으면 설정한 사운드를 재생합니다
+## Notes-zhCN: 当你获得嗜血类效果时播放自定义音效
+## Notes-zhTW: 當你獲得嗜血類效果時播放自訂音效
 ## SavedVariables: TroyBloodlustMusicDB
 ## IconTexture: 3860695
 

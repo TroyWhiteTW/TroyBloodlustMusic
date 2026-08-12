@@ -8,6 +8,14 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 
 ## English Changelog
 
+### v1.1.3-release (2026-08-13)
+
+- Bumped `## Interface` to 120100 for compatibility with World of Warcraft 12.1.0
+- Localized the AddOn List description (`## Notes`) for all six supported locales
+- The sound picker now lists full filenames, so files that differ only by extension stay distinguishable
+- Errors are now reported to error handlers (BugSack etc.) that load after this addon
+- Cleared the stored sound handle when playback fails, so a stale handle is never reused
+
 ### v1.1.2-release (2026-07-04)
 
 - Added an in-game AddOn List category (`## Category`): "Buffs & Debuffs", localized for all six supported locales
@@ -36,6 +44,14 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 ---
 
 ## 中文更新紀錄
+
+### v1.1.3-release (2026-08-13)
+
+- 更新 `## Interface` 至 120100，相容魔獸世界 12.1.0 版本
+- 插件清單描述（`## Notes`）新增全部六種支援語系
+- 音效選單改為顯示完整檔名，僅副檔名不同的檔案也能區分
+- 修正錯誤回報：晚於本插件載入的錯誤處理插件（BugSack 等）現在也能接到錯誤
+- 播放失敗時清空已儲存的音效 handle，避免重複使用失效的 handle
 
 ### v1.1.2-release (2026-07-04)
 

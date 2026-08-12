@@ -17,8 +17,6 @@ local addonName, addon = ...
 
 _G[addonName] = addon
 
-local errorHandler = geterrorhandler()
-
 --[[-------------------------------------------------------------------
 --  Localization / 本地化
 --    Missing keys fall through to the key itself (cached on first read).
@@ -58,10 +56,13 @@ end
 --    One handler per event. String handlers resolve to addon[name] at
 --    dispatch time, so methods defined after RegisterEvent still bind.
 --    Dispatch routes through geterrorhandler() so error reporters
---    (BugSack etc.) can intercept thrown errors.
+--    (BugSack etc.) can intercept thrown errors. Resolved at dispatch
+--    time rather than cached, so reporters loading after this addon are
+--    still reached.
 --    每個事件單一 handler。字串 handler 於分派時 resolve 為 addon[name]，
 --    允許「先註冊事件、後定義方法」的順序。
---    分派透過 geterrorhandler() 包裝，讓 BugSack 等插件能接住錯誤。
+--    分派透過 geterrorhandler() 包裝，讓 BugSack 等插件能接住錯誤；
+--    於分派當下取得而非快取，晚於本插件載入的錯誤回報插件才接得到。
 -------------------------------------------------------------------]]--
 
 local dispatch = {}
@@ -71,11 +72,11 @@ eventFrame:SetScript("OnEvent", function(_, event, ...)
     local handler = dispatch[event]
     if not handler then return end
     if type(handler) == "function" then
-        xpcall(handler, errorHandler, event, ...)
+        xpcall(handler, geterrorhandler(), event, ...)
     else
         local fn = addon[handler]
         if type(fn) == "function" then
-            xpcall(fn, errorHandler, addon, event, ...)
+            xpcall(fn, geterrorhandler(), addon, event, ...)
         end
     end
 end)
@@ -111,7 +112,7 @@ end
 local function call(name)
     local fn = addon[name]
     if type(fn) == "function" then
-        xpcall(fn, errorHandler, addon)
+        xpcall(fn, geterrorhandler(), addon)
     end
 end
 
