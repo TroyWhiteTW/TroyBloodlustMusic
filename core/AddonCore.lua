@@ -12,19 +12,15 @@ local addonName, addon = ...
 ---@field L table<string,string>
 ---@field RegisterEvent fun(self: AddonCore, event: string, handler: string|fun(...:any)|nil)
 ---@field RegisterUnitEvent fun(self: AddonCore, event: string, handler: string|fun(...:any)|nil, ...: string)
----@field RegisterLocale fun(self: AddonCore, locale: string, entries: table<string, string|true>)
+---@field RegisterLocale fun(self: AddonCore, locale: string, entries: table<string, string>)
 ---@field Printf fun(self: AddonCore, fmt: string, ...: any)
-
-_G[addonName] = addon
 
 --[[-------------------------------------------------------------------
 --  Localization / 本地化
 --    Missing keys fall through to the key itself (cached on first read).
---    RegisterLocale only loads enUS or the client's current locale;
---    `v == true` is a shorthand for "value equals key".
+--    RegisterLocale only loads enUS or the client's current locale.
 --    缺漏的 key 會 fallback 為 key 本身（首次讀取時快取）。
---    RegisterLocale 僅載入 enUS 或客戶端當前語系；
---    `v == true` 為「value 等於 key」的捷徑。
+--    RegisterLocale 僅載入 enUS 或客戶端當前語系。
 -------------------------------------------------------------------]]--
 
 addon.L = setmetatable({}, {
@@ -37,7 +33,7 @@ addon.L = setmetatable({}, {
 function addon:RegisterLocale(locale, entries)
     if locale ~= "enUS" and locale ~= GetLocale() then return end
     for key, value in pairs(entries) do
-        self.L[key] = (value == true) and key or value
+        self.L[key] = value
     end
 end
 

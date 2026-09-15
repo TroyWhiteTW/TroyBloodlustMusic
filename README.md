@@ -15,7 +15,7 @@ Plays a custom sound whenever you receive a Bloodlust-like effect — Bloodlust 
 - **Preview button** in the options panel — hear the selected track without waiting for combat
 - **Login-safe** — won't fire if you log in while the effect is already active
 - **Combat-safe re-sync** — corrects state after `UNIT_AURA` throttling in long fights
-- **Optional chat messages** when the effect starts and fades
+- **Optional chat messages** when the effect starts and when its Sated / Exhaustion debuff fades
 - **Localized** — English, Deutsch, Français, 한국어, 简体中文, 繁體中文
 
 ## Configuration
@@ -58,18 +58,18 @@ Built on [LibStub](https://www.wowace.com/projects/libstub) and [AceDB-3.0](http
 
 ## 中文說明
 
-當你受到嗜血類效果時自動播放音效 — 涵蓋薩滿（嗜血／英勇）、法師（時光扭曲）、獵人寵物（原始狂怒／古老歇斯底里）、喚能者（諸神之怒）。內建多首音效，也可自行替換。
+當你受到嗜血類效果時自動播放音效 — 涵蓋薩滿（嗜血術／英勇氣概）、法師（時間扭曲）、獵人寵物（野性之怒／上古狂亂）、喚能師（守護巨龍之怒）。內建多首音效，也可自行替換。
 
 ## 功能
 
-- **偵測所有嗜血變體** — 薩滿、法師、獵人寵物、喚能者全系列嗜血類技能
+- **偵測所有嗜血變體** — 薩滿、法師、獵人寵物、喚能師全系列嗜血類技能
 - **隨機模式** — 每次播放不同曲目
-- **可選音效頻道** — 主控／音樂／音效／環境／對話，跟隨遊戲音量設定
+- **可選音效頻道** — 主音量／音樂／音效／環境音／對話，跟隨遊戲音量設定
 - **自訂音效** — 見下方[自訂音效](#自訂音效)段落
 - **試聽按鈕** — 設定面板直接預覽，不必等實戰
 - **登入抑制** — 登入時若已有嗜血 buff 不會誤觸
 - **戰鬥結束後重新同步** — 修正 `UNIT_AURA` 在戰鬥中節流可能漏失的狀態
-- **可選聊天提示** — 嗜血開始與結束時於聊天視窗顯示訊息
+- **可選聊天提示** — 嗜血開始、以及疲勞 debuff 結束時於聊天視窗顯示訊息
 - **多語系** — 英文、德文、法文、韓文、簡體中文、繁體中文
 
 ## 設定

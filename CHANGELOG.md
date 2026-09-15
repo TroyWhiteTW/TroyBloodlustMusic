@@ -8,6 +8,14 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 
 ## English Changelog
 
+### v1.1.4-release (2026-09-15)
+
+- The fade chat message now reads "Bloodlust debuff has faded", since detection tracks the 10-minute Sated / Exhaustion debuff rather than the 40-second haste buff
+- Bloodlust state keeps syncing while the addon is disabled, so re-enabling no longer prints a stale message or skips playback
+- A configured sound that no longer exists falls back to Random instead of playing nothing and leaving the picker blank
+- Removed the unused global export and localization shorthand; localization files are now quote-consistent and alphabetically sorted
+- Corrected Traditional Chinese ability names in the README to match the game client
+
 ### v1.1.3-release (2026-08-13)
 
 - Bumped `## Interface` to 120100 for compatibility with World of Warcraft 12.1.0
@@ -45,6 +53,14 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 
 ## 中文更新紀錄
 
+### v1.1.4-release (2026-09-15)
+
+- 消退聊天訊息改為「嗜血 debuff 已消退」，因偵測依據是 10 分鐘的疲勞 debuff 而非 40 秒加速 buff
+- 插件停用期間仍同步嗜血狀態，重新啟用後不再誤印訊息或漏播
+- 設定指向已不存在的音檔時自動退回「隨機」，不再靜默不播、選單空白
+- 移除未使用的全域匯出與語系捷徑；語系檔統一引號並依字母排序
+- README 繁中技能名稱對齊遊戲內官方譯名
+
 ### v1.1.3-release (2026-08-13)
 
 - 更新 `## Interface` 至 120100，相容魔獸世界 12.1.0 版本
@@ -71,7 +87,7 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 
 ### v1.0.0-release (2026-05-14)
 
-- 偵測玩家身上出現嗜血類加成時播放自訂音效 — 薩滿嗜血／英勇、法師時光扭曲、獵人寵物 Ancient Hysteria／Primal Rage、喚能師 Fury of the Aspects
+- 偵測玩家身上出現嗜血類加成時播放自訂音效 — 薩滿嗜血術／英勇氣概、法師時間扭曲、獵人寵物野性之怒／上古狂亂、喚能師守護巨龍之怒
 - 設定面板（Blizzard Settings API）支援啟用切換、聊天提示、音效與音效頻道選擇、預覽按鈕
 - 動態音效載入：將 `.ogg` / `.mp3` 放入 `sounds/`、於 `sounds/sounds.lua` 列出檔名後 `/reload` 即可使用；內建「隨機」選項
 - 多語系：英文（enUS）、繁體中文（zhTW）
