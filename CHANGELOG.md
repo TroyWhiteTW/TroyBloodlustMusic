@@ -8,6 +8,10 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 
 ## English Changelog
 
+### v1.1.5-release (2026-10-18)
+
+- Bumped `## Interface` to 120105 for compatibility with World of Warcraft 12.1.5
+
 ### v1.1.4-release (2026-09-15)
 
 - The fade chat message now reads "Bloodlust debuff has faded", since detection tracks the 10-minute Sated / Exhaustion debuff rather than the 40-second haste buff
@@ -52,6 +56,10 @@ Version history. Original concept inspired by [OhnoBloodlust](https://github.com
 ---
 
 ## 中文更新紀錄
+
+### v1.1.5-release (2026-10-18)
+
+- 更新 `## Interface` 至 120105，相容魔獸世界 12.1.5 版本
 
 ### v1.1.4-release (2026-09-15)
 
